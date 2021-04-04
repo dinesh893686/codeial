@@ -12,6 +12,11 @@ const port=8000
 //     else{
         
 // else{
+
+//setting view engine ejs
+app.set('view engine','ejs')
+app.set('path','./views')
+
     
 
 //Adding routes 
