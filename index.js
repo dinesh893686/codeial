@@ -1,9 +1,10 @@
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts');
 const app=express();
 const port=8000
 // `String text ${expression}`
-
-
+app.use(express.static('./public'))
+app.use(expressLayouts);
 
 
 // console.log('Error in running a server:$(err)')
