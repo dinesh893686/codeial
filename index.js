@@ -3,7 +3,11 @@ const expressLayouts = require('express-ejs-layouts');
 const app=express();
 const port=8000
 const db=require('./config/mongoose')
+const userSignInSchema=require('./models/signInSchema')
 // `String text ${expression}`
+app.use(express.urlencoded({
+    extended: true
+}));
 app.use(express.static('./public'))
 app.use(expressLayouts);
 app.set("layout extractStyles", true)
