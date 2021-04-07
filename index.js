@@ -5,8 +5,8 @@ const port=8000
 // `String text ${expression}`
 app.use(express.static('./public'))
 app.use(expressLayouts);
-
-
+app.set("layout extractStyles", true)
+app.set("layout extractScripts", true)
 // console.log('Error in running a server:$(err)')
 // } console.log('Error in running a server:$(err)')
 //     }
